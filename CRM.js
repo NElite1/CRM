@@ -4,7 +4,10 @@ const detailCopy = document.querySelector('.detail-copy');
 function setActiveCard(card) {
   cards.forEach((item) => item.classList.remove('active'));
   card.classList.add('active');
-  detailCopy.textContent = card.dataset.detail;
+
+  if (detailCopy) {
+    detailCopy.textContent = card.dataset.detail || '';
+  }
 }
 
 cards.forEach((card) => {
