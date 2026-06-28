@@ -1,0 +1,269 @@
+@import url("CRM.css");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  color: var(--layer_-1);
+  font-size: 14px;
+  line-height: 1.5;
+  text-align:center;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.groups-shell {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.groups-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.groups-tabs {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.groups-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: rgba(242, 242, 242, 0.02);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.groups-tab:hover,
+.groups-tab:focus {
+  border-color: rgba(242, 117, 5, 0.18);
+}
+
+.groups-tab--active {
+  border-color: var(--orange);
+  background: rgba(242, 117, 5, 0.08);
+}
+
+.tab-icon {
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+}
+
+.groups-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.control-field {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-primary);
+}
+
+.control-field span {
+  min-width: 60px;
+}
+
+.control-field input {
+  min-width: 180px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(242, 242, 242, 0.08);
+  background: rgba(242, 242, 242, 0.04);
+  color: var(--text-primary);
+  outline: none;
+}
+
+.control-field input::placeholder {
+  color: rgba(242, 242, 242, 0.35);
+}
+
+.control-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.icon-button {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  border: 1px solid rgba(242, 242, 242, 0.08);
+  background: rgba(242, 242, 242, 0.04);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.groups-content {
+  width: 100%;
+}
+
+.groups-table-wrap {
+  background: rgba(242, 242, 242, 0.03);
+  border: 1px solid rgba(242, 117, 5, 0.18);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px var(--shadow-color);
+}
+
+.groups-table-shell {
+  overflow: auto;
+}
+
+.groups-table {
+  width: 100%;
+  min-width: 1500px;
+  border-collapse: collapse;
+}
+
+.groups-table th,
+.groups-table td {
+  padding: 14px 12px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.groups-table thead th {
+  border-bottom: 1px solid rgba(242, 242, 242, 0.08);
+  color: rgba(242, 242, 242, 0.8);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.groups-table thead tr:first-child th {
+  border-bottom: none;
+}
+
+.groups-table thead tr:nth-child(2) th {
+  background: rgba(242, 242, 242, 0.03);
+}
+
+.groups-table tbody tr {
+  border-bottom: 1px solid rgba(242, 242, 242, 0.06);
+}
+
+.groups-table tbody tr:nth-child(odd) {
+  background: rgba(242, 242, 242, 0.015);
+}
+
+.groups-table tbody td {
+  color: var(--layer_-1);
+}
+
+.groups-table tbody td:first-child,
+.groups-table thead th:first-child {
+  width: 48px;
+}
+
+.groups-table tbody td:nth-child(2) {
+  min-width: 180px;
+}
+
+.groups-table .status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+.groups-table .status.success {
+  background: rgba(242, 92, 5, 0.16);
+  color: var(--orange_deep);
+}
+
+.groups-table .status.fail {
+  background: rgba(242, 117, 5, 0.16);
+  color: var(--orange);
+}
+
+.groups-table a {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+.groups-table a:hover {
+  text-decoration: underline;
+}
+
+.summary-row td {
+  color: var(--text-primary);
+  font-weight: 600;
+  border-top: 1px solid rgba(242, 242, 242, 0.08);
+}
+
+.summary-row td:first-child {
+  color: var(--text-primary);
+}
+
+@media (max-width: 1120px) {
+  .groups-table {
+    min-width: 1200px;
+  }
+}
+
+@media (max-width: 860px) {
+  .groups-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .groups-tabs {
+    width: 100%;
+  }
+
+  .groups-controls {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 640px) {
+  .groups-table {
+    min-width: 100%;
+  }
+
+  .groups-table th,
+  .groups-table td {
+    padding: 10px 8px;
+  }
+
+  .control-field {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .control-field input {
+    width: 100%;
+  }
+}

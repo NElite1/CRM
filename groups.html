@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Groups | CRM</title>
+    <link rel="stylesheet" href="groups.css" />
+  </head>
+  <body>
+    <div class="groups-shell">
+      <header class="groups-header">
+        <nav class="groups-tabs" role="tablist">
+          <button class="groups-tab groups-tab--active" role="tab">Groups <span class="tab-icon">☰</span></button>
+          <button class="groups-tab" role="tab">Failures :) <span class="tab-icon">👤</span></button>
+          <button class="groups-tab" role="tab">Leaderboard <span class="tab-icon">📊</span></button>
+        </nav>
+
+        <div class="groups-controls">
+          <label class="control-field">
+            <span>Group:</span>
+            <input type="text" placeholder="Name and Surname" />
+          </label>
+
+          <label class="control-field">
+            <span>Month:</span>
+            <input type="text" placeholder="Apr" />
+          </label>
+
+          <div class="control-buttons">
+            <button class="icon-button" aria-label="Previous month"><</button>
+            <button class="icon-button" aria-label="Next month">></button>
+            <button class="icon-button" aria-label="Settings">⚙</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="groups-content">
+        <section class="groups-table-wrap">
+          <div class="groups-table-shell">
+            <table class="groups-table">
+              <thead>
+                <tr>
+                  <th rowspan="2">#</th>
+                  <th rowspan="2">Full Name</th>
+                  <th colspan="3">Week 1</th>
+                  <th colspan="3">Week 1</th>
+                  <th colspan="3">Week 1</th>
+                  <th colspan="3">Week 4</th>
+                  <th rowspan="2">Complited</th>
+                  <th rowspan="2">Failed</th>
+                  <th rowspan="2">Percentage</th>   
+                </tr>
+                <tr>
+                  <th>01</th>
+                  <th>02</th>
+                  <th>03</th>
+                  <th>01</th>
+                  <th>02</th>
+                  <th>03</th>
+                  <th>01</th>
+                  <th>02</th>
+                  <th>03</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <th>01</th>
+                  <th>02</th>
+                  <th>03</th>
+                  <th>01</th>
+                  <th>02</th>
+                  <th>03</th>
+                  <th>01</th>
+                  <th>02</th>
+                  <th>03</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="summary-row">
+                  <td colspan="2">Group overall stats :</td>
+                  <td>90 %</td>
+                  <td>10 %</td>
+                  <td>90 %</td>
+                  <td colspan="12"></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
